@@ -1,12 +1,13 @@
 import XCTest
-@testable import SwiftEvolution
+import SwiftEvolution
 
 final class SwiftEvolutionTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+    
+    func testStringOrEmpty() {
+        let value: String? = "value"
+        let noValue: String? = nil
+        
+        XCTAssertEqual(value.orEmpty(), value)
+        XCTAssertIsEmpty(noValue.orEmpty())
     }
 }
