@@ -1,7 +1,11 @@
 import Foundation
 
-public extension Optional<String> {
-    func orEmpty() -> String {
+extension Optional<String> {
+    public func orEmpty() -> String {
         self ?? ""
     }
+}
+
+extension String {
+    public static let empty = ""
 }
